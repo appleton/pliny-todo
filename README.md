@@ -1,5 +1,4 @@
-# Pliny Template app
+# Todos API - a Pliny sample app
 
-This is the template app used by the [Pliny](https://github.com/interagent/pliny) gem.
+An example of an API built with the [Pliny](https://github.com/interagent/pliny) gem.
 
-For more information please refer to the gem docs.
