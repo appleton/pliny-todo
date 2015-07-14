@@ -4,8 +4,14 @@ module Endpoints
       post do
         user = Mediators::Users::Creator.run
         status(201)
-        encode(user)
+        encode(serialize(user))
       end
+    end
+
+    private
+
+    def serialize(user, structure = :default)
+      Serializers::User.new(structure).serialize(user)
     end
   end
 end

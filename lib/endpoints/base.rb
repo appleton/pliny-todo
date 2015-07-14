@@ -34,7 +34,6 @@ module Endpoints
     end
 
     def current_user
-      p auth_header
       @current_user ||= User[auth_header]
     end
 

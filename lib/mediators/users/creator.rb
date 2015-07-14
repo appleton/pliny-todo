@@ -8,6 +8,7 @@ module Mediators::Users
 
     def call
       @model = User.create
+      self
     end
   end
 end
