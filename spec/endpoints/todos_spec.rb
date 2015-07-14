@@ -1,5 +1,5 @@
 require "spec_helper"
 
-describe Endpoints::Users do
+describe Endpoints::Todos do
   include Rack::Test::Methods
 end
