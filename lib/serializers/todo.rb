@@ -2,8 +2,8 @@ class Serializers::Todo < Serializers::Base
   structure(:default) do |todo|
     {
       id:         todo.id,
-      created_at: todo.created_at.utc,
-      updated_at: todo.updated_at.utc,
+      created_at: todo.created_at.iso8601,
+      updated_at: todo.updated_at.iso8601,
       title:      todo.title,
       completed:  todo.completed,
       links: {

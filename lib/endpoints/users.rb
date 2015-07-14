@@ -2,7 +2,7 @@ module Endpoints
   class Users < Base
     namespace "/users" do
       post do
-        user = Mediators::Users::Creator.run
+        user = Mediators::Users::Creator.run.model
         status(201)
         encode(serialize(user))
       end

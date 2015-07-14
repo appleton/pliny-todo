@@ -12,44 +12,11 @@ describe Endpoints::Users do
     "./schema/schema.json"
   end
 
-  describe 'GET /users' do
-    it 'returns correct status code and conforms to schema' do
-      get '/users'
-      assert_equal 200, last_response.status
-      assert_schema_conform
-    end
-  end
-
   describe 'POST /users' do
     it 'returns correct status code and conforms to schema' do
       header "Content-Type", "application/json"
       post '/users', MultiJson.encode({})
       assert_equal 201, last_response.status
-      assert_schema_conform
-    end
-  end
-
-  describe 'GET /users/:id' do
-    it 'returns correct status code and conforms to schema' do
-      get "/users/123"
-      assert_equal 200, last_response.status
-      assert_schema_conform
-    end
-  end
-
-  describe 'PATCH /users/:id' do
-    it 'returns correct status code and conforms to schema' do
-      header "Content-Type", "application/json"
-      patch '/users/123', MultiJson.encode({})
-      assert_equal 200, last_response.status
-      assert_schema_conform
-    end
-  end
-
-  describe 'DELETE /users/:id' do
-    it 'returns correct status code and conforms to schema' do
-      delete '/users/123'
-      assert_equal 200, last_response.status
       assert_schema_conform
     end
   end
