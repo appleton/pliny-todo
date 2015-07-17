@@ -1,0 +1,15 @@
+{
+  "name": "Todos API",
+  "description": "A todo API written with Pliny",
+  "repository": "https://github.com/appleton/pliny-todo",
+  "keywords": ["ruby", "pliny", "todo"],
+  "scripts":{
+    "postdeploy": "rake db:schema:load db:migrate"
+  },
+  "env": {
+    "PLINY_ENV": "production"
+  },
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
