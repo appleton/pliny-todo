@@ -24,14 +24,13 @@ HTTP/1.1 201 Created
 
 ### Todos
 
-All calls to `/todos` endpoints require a `Authorization: :user_id` header to
-be passed.
+All calls to `/todos` endpoints require a `Authorization: Bearer :user_id` header to be passed.
 
 #### Create
 
 ```http
 POST /todos
-Authorization: :user_id
+Authorization: Bearer :user_id
 
 {"title": "shopping"}
 
@@ -51,7 +50,7 @@ Authorization: :user_id
 
 ```http
 PATCH /todos
-Authorization: :user_id
+Authorization: Bearer :user_id
 
 {"completed": true}
 
@@ -71,7 +70,7 @@ Authorization: :user_id
 
 ```http
 GET /todos
-Authorization: :user_id
+Authorization: Bearer :user_id
 
 [
   {
@@ -91,7 +90,7 @@ Authorization: :user_id
 
 ```http
 GET /todos/:todo_id
-Authorization: :user_id
+Authorization: Bearer :user_id
 
 {
   "completed": true,

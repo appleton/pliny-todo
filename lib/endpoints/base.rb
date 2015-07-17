@@ -30,11 +30,16 @@ module Endpoints
     private
 
     def auth_header
-      @auth_header ||= request.env['HTTP_AUTHORIZATION']
+      @auth_header ||= (request.env['HTTP_AUTHORIZATION'] || "").match(/^Bearer\s+(.*)/)[1]
     end
 
     def current_user
-      @current_user ||= User[auth_header]
+      @current_user ||= begin
+        User[auth_header]
+      rescue Sequel::DatabaseError
+        # Handle a non-uuid being passed
+        nil
+      end
     end
 
     def authorize!
