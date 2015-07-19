@@ -94,7 +94,10 @@
           "href": "/todos/{(%23%2Fdefinitions%2Ftodo%2Fdefinitions%2Fidentity)}",
           "method": "GET",
           "rel": "self",
-          "title": "Info"
+          "title": "Info",
+          "targetSchema": {
+            "$ref": "#/definitions/todo"
+          }
         },
         {
           "description": "List existing todos.",
@@ -102,6 +105,15 @@
           "method": "GET",
           "rel": "instances",
           "title": "List"
+          "title": "List",
+          "targetSchema": {
+            "items": {
+              "$ref": "#/definitions/todo"
+            },
+            "type": [
+              "array"
+            ]
+          }
         },
         {
           "description": "Update an existing todo.",

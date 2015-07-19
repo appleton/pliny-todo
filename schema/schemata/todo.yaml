@@ -62,11 +62,17 @@ links:
   method: GET
   rel: self
   title: Info
+  targetSchema:
+    $ref: "/schemata/todo"
 - description: List existing todos.
   href: "/todos"
   method: GET
   rel: instances
   title: List
+  targetSchema:
+    items:
+      $ref: "/schemata/todo"
+    type: array
 - description: Update an existing todo.
   href: "/todos/{(%2Fschemata%2Ftodo%23%2Fdefinitions%2Fidentity)}"
   method: PATCH
