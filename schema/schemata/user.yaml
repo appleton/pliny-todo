@@ -36,6 +36,13 @@ links:
     type:
     - object
   title: Create
+- description: Info for current user.
+  href: "/users/~"
+  method: GET
+  rel: self
+  targetSchema:
+    $ref: "/schemata/user"
+  title: Info
 properties:
   created_at:
     "$ref": "/schemata/user#/definitions/created_at"

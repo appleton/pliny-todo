@@ -22,6 +22,18 @@ HTTP/1.1 201 Created
 }
 ```
 
+GET /users/~
+Authorization: Bearer :user_id
+
+HTTP/1.1 200 OK
+
+{
+  "created_at": "2015-07-17T13:22:12+00:00",
+  "id": "a12b3cde-c7b1-4658-8a40-1e23b7d51287",
+  "updated_at": "2015-07-17T13:22:12+00:00"
+}
+```
+
 ### Todos
 
 All calls to `/todos` endpoints require a `Authorization: Bearer :user_id` header to be passed.
@@ -33,6 +45,8 @@ POST /todos
 Authorization: Bearer :user_id
 
 {"title": "shopping"}
+
+HTTP/1.1 201 Created
 
 {
   "completed": false,
@@ -54,6 +68,8 @@ Authorization: Bearer :user_id
 
 {"completed": true}
 
+HTTP/1.1 200 OK
+
 {
   "completed": true,
   "created_at": "2015-07-17T13:22:39+00:00",
@@ -71,6 +87,8 @@ Authorization: Bearer :user_id
 ```http
 GET /todos
 Authorization: Bearer :user_id
+
+HTTP/1.1 200 OK
 
 [
   {
@@ -91,6 +109,8 @@ Authorization: Bearer :user_id
 ```http
 GET /todos/:todo_id
 Authorization: Bearer :user_id
+
+HTTP/1.1 200 OK
 
 {
   "completed": true,

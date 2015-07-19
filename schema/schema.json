@@ -206,6 +206,16 @@
             ]
           },
           "title": "Create"
+        },
+        {
+          "description": "Info for current user.",
+          "href": "/users/~",
+          "method": "GET",
+          "rel": "self",
+          "targetSchema": {
+            "$ref": "#/definitions/user"
+          },
+          "title": "Info"
         }
       ],
       "properties": {

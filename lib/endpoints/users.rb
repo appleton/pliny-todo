@@ -6,6 +6,12 @@ module Endpoints
         status(201)
         encode(serialize(user))
       end
+
+      get "/~" do
+        authorize!
+        status(200)
+        encode(serialize(current_user))
+      end
     end
 
     private
