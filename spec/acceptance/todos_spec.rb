@@ -15,7 +15,7 @@ describe Endpoints::Todos do
   let!(:user) { User.create }
   let!(:todo) { Todo.create(user: user, title: 'Shopping') }
 
-  before { header("Authorization", user.id) }
+  before { header("Authorization", "Bearer #{user.id}") }
 
   describe 'GET /todos' do
     it 'returns correct status code and conforms to schema' do
