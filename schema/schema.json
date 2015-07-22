@@ -104,7 +104,6 @@
           "href": "/todos",
           "method": "GET",
           "rel": "instances",
-          "title": "List"
           "title": "List",
           "targetSchema": {
             "items": {
