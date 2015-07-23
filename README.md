@@ -24,6 +24,9 @@ HTTP/1.1 201 Created
 }
 ```
 
+#### Show
+
+```http
 GET /users/~
 Authorization: Bearer :user_id
 
