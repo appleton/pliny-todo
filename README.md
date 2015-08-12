@@ -1,5 +1,6 @@
 # Todos API - a Pliny sample app
 
+
 An example of an API built with the [Pliny](https://github.com/interagent/pliny) gem.
 
 [![Circle CI](https://circleci.com/gh/appleton/pliny-todo.svg?style=svg)](https://circleci.com/gh/appleton/pliny-todo)
