@@ -13,7 +13,7 @@ definitions:
     format: uuid
     type:
     - string
-  title:
+  name:
     description: the todo text
     readOnly: false
     type:
@@ -43,8 +43,8 @@ links:
   rel: create
   schema:
     properties:
-      title:
-        "$ref": "/schemata/todo#/definitions/title"
+      name:
+        "$ref": "/schemata/todo#/definitions/name"
       completed:
         "$ref": "/schemata/todo#/definitions/completed"
     required:
@@ -79,8 +79,8 @@ links:
   rel: update
   schema:
   properties:
-    title:
-      "$ref": "/schemata/todo#/definitions/title"
+    name:
+      "$ref": "/schemata/todo#/definitions/name"
     completed:
       "$ref": "/schemata/todo#/definitions/completed"
     type:
@@ -91,8 +91,8 @@ properties:
     "$ref": "/schemata/todo#/definitions/created_at"
   id:
     "$ref": "/schemata/todo#/definitions/id"
-  title:
-    "$ref": "/schemata/todo#/definitions/title"
+  name:
+    "$ref": "/schemata/todo#/definitions/name"
   completed:
     "$ref": "/schemata/todo#/definitions/completed"
   updated_at:

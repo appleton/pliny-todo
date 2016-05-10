@@ -22,7 +22,7 @@
             "string"
           ]
         },
-        "title": {
+        "name": {
           "description": "the todo text",
           "readOnly": false,
           "type": [
@@ -66,8 +66,8 @@
           "rel": "create",
           "schema": {
             "properties": {
-              "title": {
-                "$ref": "#/definitions/todo/definitions/title"
+              "name": {
+                "$ref": "#/definitions/todo/definitions/name"
               },
               "completed": {
                 "$ref": "#/definitions/todo/definitions/completed"
@@ -121,8 +121,8 @@
           "rel": "update",
           "schema": null,
           "properties": {
-            "title": {
-              "$ref": "#/definitions/todo/definitions/title"
+            "name": {
+              "$ref": "#/definitions/todo/definitions/name"
             },
             "completed": {
               "$ref": "#/definitions/todo/definitions/completed"
@@ -141,8 +141,8 @@
         "id": {
           "$ref": "#/definitions/todo/definitions/id"
         },
-        "title": {
-          "$ref": "#/definitions/todo/definitions/title"
+        "name": {
+          "$ref": "#/definitions/todo/definitions/name"
         },
         "completed": {
           "$ref": "#/definitions/todo/definitions/completed"
